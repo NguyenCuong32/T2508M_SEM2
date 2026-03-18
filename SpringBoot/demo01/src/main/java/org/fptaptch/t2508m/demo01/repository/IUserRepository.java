@@ -1,5 +1,10 @@
 package org.fptaptch.t2508m.demo01.repository;
 
-public interface IUserRepository {
-    public boolean login(String username, String password);
+import org.fptaptch.t2508m.demo01.entity.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface IUserRepository extends JpaRepository<User,Integer> {
+
 }

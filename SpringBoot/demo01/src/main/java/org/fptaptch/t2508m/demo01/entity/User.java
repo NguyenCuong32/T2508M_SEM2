@@ -1,6 +1,14 @@
 package org.fptaptch.t2508m.demo01.entity;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name ="usertbl")
 public class User {
+    @Id
+    private Integer id;
     private String username;
     private String password;
     private String email;
@@ -13,6 +21,14 @@ public class User {
 
     public User() {
 
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getUsername() {
